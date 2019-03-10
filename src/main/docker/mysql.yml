@@ -1,0 +1,25 @@
+version: '2'
+services:
+    processor-mysql:
+        image: mysql:5.7.20
+        container_name: processor-mysql1
+        restart: always
+#        volumes:
+#            - processor_mysql:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=processor
+            - MYSQL_PASSWORD=test
+            - MYSQL_DATABASE=processor
+        ports:
+            - 3310:3306
+#        network_mode: "docker-net-development"
+        command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+#volumes:
+#    processor_mysql:
+#        driver: local
+#        driver_opts:
+#            type: none
+#            device: /home/docker-volumes/data/volumes/development/paraamarsh/processor/mysql
+#            o: bind

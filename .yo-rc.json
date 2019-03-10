@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "jhipsterVersion": "5.8.1",
+    "applicationType": "microservice",
+    "baseName": "processor",
+    "packageName": "com.srsconsultinginc.paraamarsh.processor",
+    "packageFolder": "com/srsconsultinginc/paraamarsh/processor",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDRhMzZmMGU0OTMwNTIyNDAyNzYxYjU5OWE4OGNkNGVmODZlNDNhNzMxOWQ4MTE3MzI4ODFiYzBlOGM3YTMwNDg3Y2RjYjY3N2ZiNmVkZjNhNTcyMWY2ZTVmYmJkZThkMTc3NTYzY2FjMmViOGM4MDkzOWVhZDc1NGUwMTdkZDA=",
+    "testFrameworks": [],
+    "jhiPrefix": "processor",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

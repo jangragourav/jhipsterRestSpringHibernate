@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+<property name="autoIncrement" value="true"/>
+<property name="now" value="now()" dbms="mysql"/>
+<!--
+    JHipster core tables.
+    The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+-->
+<changeSet id="00000000000001" author="jhipster">
+    <createTable tableName="document">
+        <column name="id" type="char(255)">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="indexid" type="varchar(30)">
+            <constraints nullable="true"/>
+        </column>
+        <column name="filename" type="varchar(300)" >
+            <constraints nullable="false"/>
+        </column>
+        <column name="extension" type="varchar(30)" >
+            <constraints nullable="false"/>
+        </column>
+        <column name="dump" type="MEDIUMBLOB">
+            <constraints nullable="false"/>
+        </column>
+        <column name="mimetype" type="varchar(300)">
+            <constraints nullable="true"/>
+        </column>
+        <column name="indexedcontent" type="text" >
+            <constraints nullable="true"/>
+        </column>
+        <column name="htmlcontent" type="text">
+            <constraints nullable="true"/>
+        </column>
+        <column name="summary" type="varchar(160)">
+            <constraints nullable="true"/>
+        </column>
+        <column name="created_by" type="varchar(160)" >
+            <constraints nullable="false"/>
+        </column>
+        <column name="modified_by" type="varchar(160)">
+            <constraints nullable="true"/>
+        </column>
+        <column name="created_on" type="timestamp"  defaultValueDate="${now}">
+        </column>
+        <column name="modified_on" type="timestamp"  defaultValueDate="${now}">
+        </column>
+    </createTable>
+
+</changeSet>
+
+</databaseChangeLog>
